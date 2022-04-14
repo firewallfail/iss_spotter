@@ -60,8 +60,8 @@ const nextISSTimesForMyLocation = function(callback) {
       fetchISSFlyOverTimes({ latitude: '49.27670', longitude: '-123.13000' }, (error, times) => {
         if (error) return callback(error, null);
         callback(null, times);
-      })
-    })
+      });
+    });
   });
 };
 
