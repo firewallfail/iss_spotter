@@ -10,7 +10,7 @@ nextISSTimesForMyLocation().then((passTimes) => {
   // }
 }).catch((error) => {
   console.log("It didn't work:", error.message);
-})
+});
 // fetchMyIP()
 //   .then(fetchCoordsByIP)
 //   .then(fetchISSFlyOverTimes)
