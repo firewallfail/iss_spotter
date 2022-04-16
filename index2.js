@@ -1,12 +1,13 @@
-const { nextISSTimesForMyLocation } = require('./iss_promised');
+const { nextISSTimesForMyLocation, printPassTimes } = require('./iss_promised');
 
 
 nextISSTimesForMyLocation().then((passTimes) => {
-  for (let time of passTimes) {
-    let readableTime = new Date(time.risetime * 1000);
-    let duration = time.duration;
-    console.log(`Next pass at ${readableTime} for ${duration} seconds!`);
-  }
+  printPassTimes(passTimes);
+  // for (let time of passTimes) {
+  //   let readableTime = new Date(time.risetime * 1000);
+  //   let duration = time.duration;
+  //   console.log(`Next pass at ${readableTime} for ${duration} seconds!`);
+  // }
 }).catch((error) => {
   console.log("It didn't work:", error.message);
 })

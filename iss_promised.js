@@ -27,6 +27,15 @@ const nextISSTimesForMyLocation = function() {
     })
 }
 
+const printPassTimes = function(passTimes) {
+  for (let time of passTimes) {
+    let readableTime = new Date(time.risetime * 1000);
+    let duration = time.duration;
+    console.log(`Next pass at ${readableTime} for ${duration} seconds!`);
+  }
+}
+
 module.exports = {
-  nextISSTimesForMyLocation
+  nextISSTimesForMyLocation,
+  printPassTimes
 };
